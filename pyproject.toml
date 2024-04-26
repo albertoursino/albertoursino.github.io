@@ -66,6 +66,10 @@ skip-magic-trailing-comma = false
 # Like Black, automatically detect the appropriate line ending.
 line-ending = "auto"
 
+[tool.poe.tasks]
+start         = "python webapp/manage.py runserver"
+prec          = "pre-commit run --all-files"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
