@@ -1,1 +1,2 @@
-﻿webapp/webapp/__pycache__
+﻿__pycache__
+webapp/db.sqlite3

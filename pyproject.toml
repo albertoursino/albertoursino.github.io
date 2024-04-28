@@ -9,6 +9,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 django = "^5.0"
+loguru = "^0.7.2"
+dvc = "^3.50.1"
+dvc-gdrive = "^3.0.1"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
@@ -47,9 +50,8 @@ indent-width = 4
 target-version = "py312"
 
 [tool.ruff.lint]
-# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
-select = ["E4", "E7", "E9", "F"]
-ignore = []
+select = ["ALL"]
+ignore = ["D104", "D100"]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
@@ -67,7 +69,12 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [tool.poe.tasks]
-start         = "python webapp/manage.py runserver"
+# Django
+runserver     = "python webapp/manage.py runserver"
+migrate       = "python webapp/manage.py migrate"
+make          = "python webapp/manage.py makemigrations"
+super         = "python webapp/manage.py createsuperuser"
+# pre-commit
 prec          = "pre-commit run --all-files"
 
 [build-system]
