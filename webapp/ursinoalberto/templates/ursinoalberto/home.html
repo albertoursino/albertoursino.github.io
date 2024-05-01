@@ -1,1 +1,49 @@
-<title>Alberto Ursino</title>
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="{% static 'ursinoalberto/styles/home.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="title-section">Welcome.</div>
+    <div class="variable-div"></div>
+    <div class="profile-pic-section">
+      <div class="section">
+        <div class="text">This is Alberto Ursino, don't fuck with me.</div>
+        <div class="icons">
+          <a
+            href="https://www.linkedin.com/in/alberto-ursino-8b3466161/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/albertoursino" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="mailto:albertoursino98@gmail.com"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+      <img
+        src="{% static 'ursinoalberto/images/me.jpeg' %}"
+        alt="Main picture of Alberto Ursino"
+      />
+    </div>
+  </body>
+</html>
+
+<script src="{% static 'ursinoalberto/javascripts/home.js' %}"></script>

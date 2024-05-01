@@ -1,0 +1,70 @@
+/* defining global variables */
+:root {
+  --a: #1d1d20;
+  --b: #ebebd3;
+  --c: #da4167;
+  --d: #f4d35e;
+  --e: #f78764;
+  --default-box-shadow: 10px 10px 20px 0px var(--b);
+  --default-text-shadow: 10px 10px 20px var(--b);
+  --default-border: solid 3px var(--b);
+}
+
+/* head style attributes */
+head {
+  display: none;
+}
+
+/* body style attributes */
+body {
+  background-color: var(--a);
+  font-family: "Montserrat-Regular", Helvetica, Arial, sans-serif;
+  color: var(--b);
+  display: inline-block;
+  min-height: 100vh; /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
+  margin: 0;
+}
+
+.title-section {
+  display: block;
+  text-align: center;
+  font-size: 100px;
+  padding: 50px;
+}
+
+.profile-pic-section {
+  text-align: center;
+  margin: 0px 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.section {
+  align-content: center;
+  font-size: 25px;
+  margin: 0 100px 0 0;
+}
+
+.profile-pic-section img {
+  width: 30%;
+  height: fit-content;
+  align-self: center;
+  border-radius: 100%;
+  border: var(--default-border);
+}
+
+.icons {
+  padding: 17px 0 0 0;
+}
+
+.icons i {
+  margin: 0 10px;
+}
+
+a {
+  color: var(--b);
+}
+
+a:visited {
+  color: var(--b);
+}

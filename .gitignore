@@ -1,2 +1,3 @@
 ﻿__pycache__
 webapp/db.sqlite3
+node_modules
