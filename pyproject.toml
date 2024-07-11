@@ -12,6 +12,7 @@ django = "^5.0"
 loguru = "^0.7.2"
 dvc = "^3.50.1"
 dvc-gdrive = "^3.0.1"
+poethepoet = "^0.27.0"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
@@ -70,12 +71,12 @@ line-ending = "auto"
 
 [tool.poe.tasks]
 # Django
-runserver     = "python webapp/manage.py runserver"
-migrate       = "python webapp/manage.py migrate"
-make          = "python webapp/manage.py makemigrations"
-super         = "python webapp/manage.py createsuperuser"
+runserver               = "python webapp/manage.py runserver"
+migrate                 = "python webapp/manage.py migrate"
+makemigrations          = "python webapp/manage.py makemigrations"
+createsuperuser         = "python webapp/manage.py createsuperuser"
 # pre-commit
-prec          = "pre-commit run --all-files"
+runall                  = "pre-commit run --all-files"
 
 [build-system]
 requires = ["poetry-core"]
