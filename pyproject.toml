@@ -7,12 +7,11 @@ license = "Apache License"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "3.11.*"
 django = "^5.0"
 loguru = "^0.7.2"
-dvc = "^3.50.1"
-dvc-gdrive = "^3.0.1"
 poethepoet = "^0.27.0"
+awsebcli = "^3.20.10"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.

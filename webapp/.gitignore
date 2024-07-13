@@ -1,9 +1,5 @@
-﻿__pycache__
-webapp/db.sqlite3
-node_modules
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
-webapp/static
