@@ -25,32 +25,31 @@ body {
   margin: 0;
 }
 
-.title-section {
-  display: block;
-  text-align: center;
+.section {text-align: center;margin: 2rem;display: block;}
+
+.title {
   font-size: 100px;
-  padding: 50px;
 }
 
-.profile-pic-section {
-  text-align: center;
-  margin: 0px 200px;
-  display: flex;
-  justify-content: space-around;
+.sub-title {
 }
 
-.section {
-  align-content: center;
-  font-size: 25px;
-  margin: 0 100px 0 0;
-}
+.profile-pic {}
 
-.profile-pic-section img {
+.profile-pic img {
   width: 30%;
   height: fit-content;
-  align-self: center;
   border-radius: 100%;
   border: var(--default-border);
+}
+
+.cv{
+
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
 }
 
 .icons {

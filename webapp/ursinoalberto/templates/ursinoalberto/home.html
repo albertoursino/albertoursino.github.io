@@ -19,32 +19,29 @@
     />
   </head>
 
-  <body>
-    <div class="title-section">Welcome.</div>
-    <div class="variable-div"></div>
-    <div class="profile-pic-section">
-      <div class="section">
-        <div class="text">This is Alberto Ursino, don't fuck with me.</div>
-        <div class="icons">
-          <a
-            href="https://www.linkedin.com/in/alberto-ursino-8b3466161/"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/albertoursino" target="_blank"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="mailto:albertoursino98@gmail.com"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
-        </div>
-      </div>
-      <img
-        src="{% static 'ursinoalberto/images/me.jpeg' %}"
-        alt="Main picture of Alberto Ursino"
-      />
+  <body> 
+    <div class="section title">Welcome</div>
+    <div class="section sub-title">You landed on Alberto Ursino's personal website</div>
+    <div class="section profile-pic">
+      <img src="{% static 'ursinoalberto/images/me.jpeg' %}" alt="Alberto Ursino's profile pic"/>
     </div>
+    <div class="section cv">CV</div>
+    <div class="section links">
+      <a
+        href="https://www.linkedin.com/in/alberto-ursino-8b3466161/"
+        target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a href="https://github.com/albertoursino" target="_blank"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+      <a href="mailto:albertoursino98@gmail.com"
+        ><i class="fa-solid fa-envelope"></i
+      ></a>
+    </div>
+    <div class="section footer"><div>AWS & Django</div><div>created by Alberto Ursino</div></div>
   </body>
+  
 </html>
 
 <script src="{% static 'ursinoalberto/javascripts/home.js' %}"></script>
