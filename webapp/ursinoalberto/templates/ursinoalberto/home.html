@@ -3,45 +3,39 @@
 <!doctype html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Alberto Ursino</title>
-    <link
-      rel="stylesheet"
-      href="{% static 'ursinoalberto/styles/home.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <body> 
-    <div class="section title">Welcome</div>
-    <div class="section sub-title">You landed on Alberto Ursino's personal website</div>
+<head>
+  <meta charset="utf-8" />
+  <title>Alberto Ursino</title>
+  <link rel="stylesheet" href="{% static 'ursinoalberto/styles/home.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="section">
+      <div class="title">Welcome</div>
+      <div class="sub-title">You landed on Alberto Ursino's personal website</div>
+    </div>
     <div class="section profile-pic">
-      <img src="{% static 'ursinoalberto/images/me.jpeg' %}" alt="Alberto Ursino's profile pic"/>
+      <img src="{% static 'ursinoalberto/images/me.jpeg' %}" alt="Alberto Ursino's profile pic" />
     </div>
-    <div class="section cv">CV</div>
+    <div class="section cv"><a href="{% static 'ursinoalberto/cv.pdf' %}" download="cv.pdf">Download CV</a></div>
     <div class="section links">
-      <a
-        href="https://www.linkedin.com/in/alberto-ursino-8b3466161/"
-        target="_blank"
-        ><i class="fa-brands fa-linkedin"></i
-      ></a>
-      <a href="https://github.com/albertoursino" target="_blank"
-        ><i class="fa-brands fa-github"></i
-      ></a>
-      <a href="mailto:albertoursino98@gmail.com"
-        ><i class="fa-solid fa-envelope"></i
-      ></a>
+      <a href="https://www.linkedin.com/in/alberto-ursino-8b3466161/" target="_blank"><i
+          class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/albertoursino" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:albertoursino98@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
-    <div class="section footer"><div>AWS & Django</div><div>created by Alberto Ursino</div></div>
-  </body>
-  
+    <div class="section footer">
+      <div>AWS & Django</div>
+      <div>created by Alberto Ursino</div>
+    </div>
+  </div>
+</body>
+
 </html>
 
 <script src="{% static 'ursinoalberto/javascripts/home.js' %}"></script>

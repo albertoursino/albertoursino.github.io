@@ -17,39 +17,70 @@ head {
 
 /* body style attributes */
 body {
-  background-color: var(--a);
+  background-color: var(--e);
   font-family: "Montserrat-Regular", Helvetica, Arial, sans-serif;
   color: var(--b);
-  display: inline-block;
-  min-height: 100vh; /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
+  display: flex;
+  min-height: 100vh;
+  /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
   margin: 0;
+  width: 100vw;
+  justify-content: space-around;
 }
 
-.section {text-align: center;margin: 2rem;display: block;}
+.flex-container {
+  display: flex;
+  width: 85vw;
+  max-height: 100vh;
+  flex-direction: column;
+  border-radius: 50px;
+  justify-content: center;
+}
+
+.section {
+  text-align: center;
+  margin: auto;
+}
 
 .title {
-  font-size: 100px;
+  font-size: 10vw;
+  margin-bottom: 100px;
 }
 
 .sub-title {
+  font-size: 5vw;
 }
 
-.profile-pic {}
+.profile-pic {
+}
 
 .profile-pic img {
-  width: 30%;
-  height: fit-content;
+  height: 50vw;
   border-radius: 100%;
-  border: var(--default-border);
 }
 
-.cv{
-
+.cv a {
+  color: var(--a);
+  padding: 2vw;
+  text-decoration: none;
+  font-size: 2vw;
+  border-radius: 15px;
+  background: var(--b);
 }
 
-.footer{
-  display: flex;
-  justify-content: space-between;
+.links {
+  font-size: 4vw;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 1vw;
 }
 
 .icons {
@@ -62,8 +93,34 @@ body {
 
 a {
   color: var(--b);
+  margin: 0 40px;
 }
 
 a:visited {
   color: var(--b);
+}
+
+@media screen and (min-width: 3000px) {
+  .title {
+     font-size: 300px;
+  }
+
+  .sub-title{
+    font-size: 150px;
+  }
+
+  .cv a {
+    font-size: 60px;
+    padding: 60px;
+  }
+
+  .links {
+    font-size: 120px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .profile-pic img {
+    height: 850px;
+  }
 }
