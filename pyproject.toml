@@ -74,6 +74,7 @@ runserver               = "python webapp/manage.py runserver"
 migrate                 = "python webapp/manage.py migrate"
 makemigrations          = "python webapp/manage.py makemigrations"
 createsuperuser         = "python webapp/manage.py createsuperuser"
+collectstatic           = "python webapp/manage.py collectstatic"
 # pre-commit
 runall                  = "pre-commit run --all-files"
 

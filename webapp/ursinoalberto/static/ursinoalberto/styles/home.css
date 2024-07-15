@@ -17,7 +17,7 @@ head {
 
 /* body style attributes */
 body {
-  background-color: var(--e);
+  background-color: #331832;
   font-family: "Montserrat-Regular", Helvetica, Arial, sans-serif;
   color: var(--b);
   display: flex;
@@ -30,57 +30,69 @@ body {
 
 .flex-container {
   display: flex;
-  width: 85vw;
-  max-height: 100vh;
   flex-direction: column;
   border-radius: 50px;
   justify-content: center;
+  margin: auto;
 }
 
 .section {
   text-align: center;
   margin: auto;
+  font-family: monospace;
+}
+
+.header {
+
+  margin-bottom: 1vh;
 }
 
 .title {
-  font-size: 10vw;
-  margin-bottom: 100px;
-}
-
-.sub-title {
   font-size: 5vw;
 }
 
+.sub-title {
+  font-size: 2vw;
+  margin-bottom: 2vh;
+}
+
 .profile-pic {
+  margin-bottom: 3vh;
 }
 
 .profile-pic img {
-  height: 50vw;
   border-radius: 100%;
+  width: 25vw;
+  max-width: fit-content;
+  border: 0.2vw solid;
+}
+
+.cv {
+  margin-bottom: 3vh;
 }
 
 .cv a {
   color: var(--a);
-  padding: 2vw;
   text-decoration: none;
-  font-size: 2vw;
-  border-radius: 15px;
+  border-radius: 0.5em;
   background: var(--b);
+  font-size: 1vw;
+  display: block;
+  padding: 0.7em;
 }
 
 .links {
-  font-size: 4vw;
   display: flex;
   justify-content: center;
+  font-size: 1.5vw;
+  margin-bottom: 1vh;
 }
 
 .footer {
-
-  display: flex;
-
-  justify-content: space-between;
-
-  font-size: 1vw;
+  width: 100%;
+  font-size: 0.8vw;
+  font-style: italic;
+  text-align: right;
 }
 
 .icons {
@@ -100,27 +112,49 @@ a:visited {
   color: var(--b);
 }
 
-@media screen and (min-width: 3000px) {
+.cv a:hover {
+  background-color: #f4d35e;
+  box-shadow: -1px 2px 3px var(--c);
+  color: #1d1d20;
+  text-shadow: none;
+}
+
+a:hover {
+  color: #f4d35e;
+  text-shadow: -1px 2px 3px var(--c);
+}
+
+.divider {
+  width: 75%;
+  margin-bottom: 3vh;
+}
+
+.badges a {
+  margin: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .profile-pic img {
+    width: 162.5px;
+  }
+
   .title {
-     font-size: 300px;
+    font-size: 32.5px;
   }
 
-  .sub-title{
-    font-size: 150px;
+  .sub-title {
+    font-size: 13px;
   }
 
-  .cv a {
-    font-size: 60px;
-    padding: 60px;
+  .footer {
+    font-size: 5.2px;
   }
 
   .links {
-    font-size: 120px;
+    font-size: 9.75px;
   }
-}
 
-@media screen and (min-width: 1700px) {
-  .profile-pic img {
-    height: 850px;
+  .cv a {
+    font-size: 6.5px;
   }
 }
