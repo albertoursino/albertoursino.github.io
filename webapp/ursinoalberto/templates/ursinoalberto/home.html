@@ -3,47 +3,78 @@
 <!doctype html>
 
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alberto Ursino</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'ursinoalberto/styles/home.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'ursinoalberto/images/favicon.ico' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alberto Ursino</title>
-  <link rel="stylesheet" href="{% static 'ursinoalberto/styles/home.css' %}" />
-  <link rel="shortcut icon" type="image/png" href="{% static 'ursinoalberto/images/favicon.ico' %}" >
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-  <div class="flex-container">
-    <div class="section header">
-      <div class="title">Welcome</div>
-      <div class="sub-title">You landed on Alberto Ursino's personal website</div>
-      <div class="badges">
-        <a href="https://aws.amazon.com/elasticbeanstalk/?gclid=Cj0KCQjwkdO0BhDxARIsANkNcrdrcpr7ZwPcPJdAJXkYpE8eeh8ej4__xJm3qZa5cW1KQkh3-nCcZhsaAk0GEALw_wcB&trk=b291fc2d-ecdb-48b9-9a2c-fdedcf3ae325&sc_channel=ps&ef_id=Cj0KCQjwkdO0BhDxARIsANkNcrdrcpr7ZwPcPJdAJXkYpE8eeh8ej4__xJm3qZa5cW1KQkh3-nCcZhsaAk0GEALw_wcB:G:s&s_kwcid=AL!4422!3!651510173466!e!!g!!elastic%20beanstalk!19836373402!146491523465"
-          target="_blank"><img alt="Static Badge"
-            src="https://img.shields.io/badge/AWS-Elastic%20Beanstalk-blue?logo=amazon&labelColor=%231A2432&color=%23FF9900"></a>
-        <a href="https://www.djangoproject.com/" target="_blank"><img alt="Static Badge"
-            src="https://img.shields.io/badge/Django-5.0.7-blue?logo=Django&labelColor=%230C4B33&color=%23FFFFFF"></a>
+  <body>
+    <div class="flex-container">
+      <div class="section header">
+        <div class="title">Welcome</div>
+        <div class="sub-title">
+          You landed on Alberto Ursino's personal website
+        </div>
+        <div class="badges">
+          <a
+            href="https://aws.amazon.com/elasticbeanstalk/?gclid=Cj0KCQjwkdO0BhDxARIsANkNcrdrcpr7ZwPcPJdAJXkYpE8eeh8ej4__xJm3qZa5cW1KQkh3-nCcZhsaAk0GEALw_wcB&trk=b291fc2d-ecdb-48b9-9a2c-fdedcf3ae325&sc_channel=ps&ef_id=Cj0KCQjwkdO0BhDxARIsANkNcrdrcpr7ZwPcPJdAJXkYpE8eeh8ej4__xJm3qZa5cW1KQkh3-nCcZhsaAk0GEALw_wcB:G:s&s_kwcid=AL!4422!3!651510173466!e!!g!!elastic%20beanstalk!19836373402!146491523465"
+            target="_blank"
+            ><img
+              alt="Static Badge"
+              src="https://img.shields.io/badge/AWS-Elastic%20Beanstalk-blue?logo=amazon&labelColor=%231A2432&color=%23FF9900"
+          /></a>
+          <a href="https://www.djangoproject.com/" target="_blank"
+            ><img
+              alt="Static Badge"
+              src="https://img.shields.io/badge/Django-5.0.7-blue?logo=Django&labelColor=%230C4B33&color=%23FFFFFF"
+          /></a>
+        </div>
       </div>
+      <hr class="solid divider" />
+      <div class="section profile-pic">
+        <img
+          src="{% static 'ursinoalberto/images/me.jpeg' %}"
+          alt="Alberto Ursino's profile pic"
+        />
+      </div>
+      <div class="section cv">
+        <a href="{% static 'ursinoalberto/cv.pdf' %}" download="cv.pdf"
+          >Download CV</a
+        >
+      </div>
+      <div class="section links">
+        <a
+          href="https://www.linkedin.com/in/alberto-ursino-8b3466161/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/albertoursino" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="mailto:albertoursino98@gmail.com"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+      </div>
+      <div class="section footer">Created by Alberto Ursino</div>
     </div>
-    <hr class="solid divider">
-    <div class="section profile-pic">
-      <img src="{% static 'ursinoalberto/images/me.jpeg' %}" alt="Alberto Ursino's profile pic" />
-    </div>
-    <div class="section cv"><a href="{% static 'ursinoalberto/cv.pdf' %}" download="cv.pdf">Download CV</a></div>
-    <div class="section links">
-      <a href="https://www.linkedin.com/in/alberto-ursino-8b3466161/" target="_blank"><i
-          class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/albertoursino" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="mailto:albertoursino98@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-    <div class="section footer">Created by Alberto Ursino
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
 
 <script src="{% static 'ursinoalberto/javascripts/home.js' %}"></script>
