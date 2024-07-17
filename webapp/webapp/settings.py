@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-=dg_ztc%&dzmnj-c1z)1ifd69mw@(($6#jzxpo+h2!8m%5ze6r"  # noqa: S105
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["django-env.eba-fhpcnusy.us-west-2.elasticbeanstalk.com", "*"]
 
@@ -52,7 +52,9 @@ MIDDLEWARE = [
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
     SECURE_SSL_REDIRECT = True
-else:
+elif DEBUG:
+    INSTALLED_APPS.append("livereload")
+    MIDDLEWARE.append("livereload.middleware.LiveReloadScript")
     SECURE_PROXY_SSL_HEADER = None
     SECURE_SSL_REDIRECT = False
 
