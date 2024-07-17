@@ -13,6 +13,7 @@ loguru = "^0.7.2"
 poethepoet = "^0.27.0"
 awsebcli = "^3.20.10"
 pre-commit = "^3.7.1"
+django-livereload-server = "^0.5.1"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
@@ -71,13 +72,15 @@ line-ending = "auto"
 
 [tool.poe.tasks]
 # Django
-runserver               = "python webapp/manage.py runserver"
+runserver               = "python webapp/manage.py runserver 8001"
 migrate                 = "python webapp/manage.py migrate"
 makemigrations          = "python webapp/manage.py makemigrations"
 createsuperuser         = "python webapp/manage.py createsuperuser"
-collectstatic           = "python webapp/manage.py collectstatic"
+collect                 = "python webapp/manage.py collectstatic"
 # pre-commit
 runall                  = "pre-commit run --all-files"
+# live server
+livereload              = "python webapp/manage.py livereload"
 
 [build-system]
 requires = ["poetry-core"]
