@@ -89,15 +89,28 @@ body {
   }
 }
 
-.cv {
+.header {
+  width: 100vw;
   position: absolute;
   top: 0;
-  right: 0;
-  text-decoration: none;
-  margin: 2vw 4vw 0 0;
+  box-sizing: border-box;
+  padding: 2vw 4vw 0 0;
   animation-name: top-down;
   animation-duration: 2s;
+  text-align: right;
 }
+
+.header a {
+  margin: 0 1vw;
+}
+
+.header a:last-child {
+  margin-right: 0;
+}
+
+.about {}
+
+.cv {}
 
 @keyframes down-top {
   from {
@@ -147,6 +160,7 @@ body {
 a {
   color: var(--b);
   font-size: 3.5vw;
+  text-decoration: none;
 }
 
 a:visited {
