@@ -28,14 +28,6 @@ body {
   align-content: center;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  border-radius: 50px;
-  justify-content: center;
-  margin: auto;
-}
-
 .header {
   text-align: center;
   width: 100vw;
@@ -59,22 +51,6 @@ body {
   animation-duration: 2s;
   box-sizing: border-box;
   padding: 0 2vw 0 2vw;
-}
-
-.sub-title {
-  font-size: 2vw;
-  margin-bottom: 2vh;
-}
-
-.profile-pic {
-  margin-bottom: 3vh;
-}
-
-.profile-pic img {
-  border-radius: 100%;
-  width: 20vw;
-  max-width: fit-content;
-  border: 0.2vw solid;
 }
 
 @keyframes top-down {
