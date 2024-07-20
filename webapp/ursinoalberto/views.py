@@ -11,7 +11,4 @@ def home(request: HttpRequest) -> HttpResponse:
 
 def resume(request: HttpRequest) -> HttpResponse:
     """Resume view."""
-    return FileResponse(
-        Path.open("webapp/ursinoalberto/static/ursinoalberto/resume.pdf", "rb"),
-        content_type="application/pdf",
-    )
+    return render(request, "ursinoalberto/resume.html", context={})
