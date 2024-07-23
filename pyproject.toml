@@ -72,7 +72,7 @@ line-ending = "auto"
 
 [tool.poe.tasks]
 # Django
-runserver = "python webapp/manage.py runserver 8002"
+runserver = "python webapp/manage.py runserver 8002 --settings=webapp.settings_dev"
 migrate = "python webapp/manage.py migrate"
 makemigrations = "python webapp/manage.py makemigrations"
 createsuperuser = "python webapp/manage.py createsuperuser"
