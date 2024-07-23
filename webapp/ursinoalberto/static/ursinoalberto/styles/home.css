@@ -28,14 +28,6 @@ body {
   align-content: center;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  border-radius: 50px;
-  justify-content: center;
-  margin: auto;
-}
-
 .header {
   text-align: center;
   width: 100vw;
@@ -61,22 +53,6 @@ body {
   padding: 0 2vw 0 2vw;
 }
 
-.sub-title {
-  font-size: 2vw;
-  margin-bottom: 2vh;
-}
-
-.profile-pic {
-  margin-bottom: 3vh;
-}
-
-.profile-pic img {
-  border-radius: 100%;
-  width: 20vw;
-  max-width: fit-content;
-  border: 0.2vw solid;
-}
-
 @keyframes top-down {
   from {
     top: -50rem;
@@ -89,15 +65,28 @@ body {
   }
 }
 
-.cv {
+.header {
+  width: 100vw;
   position: absolute;
   top: 0;
-  right: 0;
-  text-decoration: none;
-  margin: 2vw 4vw 0 0;
+  box-sizing: border-box;
+  padding: 2vw 4vw 0 0;
   animation-name: top-down;
   animation-duration: 2s;
+  text-align: right;
 }
+
+.header a {
+  margin: 0 1vw;
+}
+
+.header a:last-child {
+  margin-right: 0;
+}
+
+.about {}
+
+.cv {}
 
 @keyframes down-top {
   from {
@@ -147,6 +136,7 @@ body {
 a {
   color: var(--b);
   font-size: 3.5vw;
+  text-decoration: none;
 }
 
 a:visited {

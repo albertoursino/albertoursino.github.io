@@ -1,0 +1,10 @@
+{% extends "ursinoalberto/base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'ursinoalberto/styles/resume.css' %}" />
+{% endblock %}
+
+{% block body %}
+<embed src="{% static 'ursinoalberto/pdfs/resume.pdf' %}" type="application/pdf">
+{% endblock %}

@@ -53,7 +53,7 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["D104", "D100"]
+ignore = ["D104", "D100", "ARG001"]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
@@ -72,15 +72,15 @@ line-ending = "auto"
 
 [tool.poe.tasks]
 # Django
-runserver               = "python webapp/manage.py runserver 8001"
-migrate                 = "python webapp/manage.py migrate"
-makemigrations          = "python webapp/manage.py makemigrations"
-createsuperuser         = "python webapp/manage.py createsuperuser"
-collect                 = "python webapp/manage.py collectstatic"
+runserver = "python webapp/manage.py runserver 8002 --settings=webapp.settings_dev"
+migrate = "python webapp/manage.py migrate"
+makemigrations = "python webapp/manage.py makemigrations"
+createsuperuser = "python webapp/manage.py createsuperuser"
+collect = "python webapp/manage.py collectstatic"
 # pre-commit
-runall                  = "pre-commit run --all-files"
+runall = "pre-commit run --all-files"
 # live server
-livereload              = "python webapp/manage.py livereload"
+livereload = "python webapp/manage.py livereload"
 
 [build-system]
 requires = ["poetry-core"]
