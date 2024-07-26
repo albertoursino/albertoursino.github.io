@@ -3,18 +3,20 @@
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'ursinoalberto/styles/home.css' %}" />
+<link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet'>
+<script src="{% static 'ursinoalberto/javascripts/home.js' %}"></script>
 {% endblock %}
 
 {% block body %}
+<!-- <a class="cv" href="resume.pdf" target="_blank">CV</a> -->
 <div class="header">
-  <a class="cv" href="resume.pdf" target="_blank">CV</a>
+  <a class="switch-mode-btn" onclick="switchMode()"><i class="fa-regular fa-lightbulb"></i></a>
 </div>
 <div class="title">Alberto Ursino</div>
+<div class="sub-title">I love writing code 🪶 and designing software 🎨</div>
 <div class="links">
-  <a href="https://www.linkedin.com/in/alberto-ursino-8b3466161/" target="_blank"><i
+  <a class="linkedin-btn" href="https://www.linkedin.com/in/alberto-ursino-8b3466161/" target="_blank"><i
       class="fa-brands fa-linkedin"></i></a>
-  <a href="https://github.com/albertoursino" target="_blank"><i class="fa-brands fa-github"></i></a>
+  <a class="github-btn" href="https://github.com/albertoursino" target="_blank"><i class="fa-brands fa-github"></i></a>
 </div>
 {% endblock %}
-
-<script src="{% static 'ursinoalberto/javascripts/home.js' %}"></script>
