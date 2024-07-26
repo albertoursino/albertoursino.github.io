@@ -12,3 +12,7 @@ def home(request: HttpRequest) -> HttpResponse:
 def resume(request: HttpRequest) -> HttpResponse:
     """Resume view."""
     return render(request, "ursinoalberto/resume.html", context={})
+
+def master_thesis(request: HttpRequest) -> HttpResponse:
+    """Resume view."""
+    return render(request, "ursinoalberto/master_thesis.html", context={})

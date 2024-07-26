@@ -8,6 +8,7 @@
   --default-box-shadow: 10px 10px 20px 0px var(--b);
   --default-text-shadow: 10px 10px 20px var(--b);
   --default-border: solid 3px var(--b);
+  height: 100%;
 }
 
 /* head style attributes */
@@ -21,7 +22,7 @@ body {
   font-family: monospace;
   color: var(--b);
   display: block;
-  min-height: 100vh;
+  height: 100%;
   /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
   margin: 0;
   width: 100vw;
@@ -34,7 +35,7 @@ body {
   font-family: monospace;
   color: var(--a);
   display: block;
-  min-height: 100vh;
+  height: 100%;
   /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
   margin: 0;
   width: 100vw;
@@ -92,7 +93,7 @@ body {
 
 .header {
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   box-sizing: border-box;
   padding: 2vh 4vw 0 0;
@@ -108,10 +109,6 @@ body {
 .header a:last-child {
   margin-right: 0;
 }
-
-.about {}
-
-.cv {}
 
 @keyframes down-top {
   from {
@@ -129,7 +126,7 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100vw;
   padding: 0 0 2vh 0;

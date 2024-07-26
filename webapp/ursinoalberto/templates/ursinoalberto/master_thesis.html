@@ -1,0 +1,22 @@
+{% extends "ursinoalberto/base.html" %}
+{% load static %}
+
+{% block head %}
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    embed {
+        width: inherit;
+        height: inherit;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<embed src="{% static 'ursinoalberto/pdfs/master_thesis.pdf' %}" type="application/pdf">
+{% endblock %}

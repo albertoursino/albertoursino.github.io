@@ -1,3 +1,5 @@
+window.scrollTo(0, 1);
+
 function switchMode() {
   var body = document.body;
   var linkedin_btn = document.getElementsByClassName("linkedin-btn")[0]

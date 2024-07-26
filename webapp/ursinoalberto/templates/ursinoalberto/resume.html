@@ -2,7 +2,19 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'ursinoalberto/styles/resume.css' %}" />
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    embed {
+        width: inherit;
+        height: inherit;
+    }
+</style>
 {% endblock %}
 
 {% block body %}
