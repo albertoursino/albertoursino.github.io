@@ -1,10 +1,10 @@
 /* defining global variables */
 :root {
-  --a: #1d1d20;
+  --a: #101011;
   --b: #ebebd3;
   --c: #da4167;
-  --d: #f4d35e;
-  --e: #f78764;
+  --d: rgb(0, 91, 110);
+  --e: rgb(0, 147, 177);
   --default-box-shadow: 10px 10px 20px 0px var(--b);
   --default-text-shadow: 10px 10px 20px var(--b);
   --default-border: solid 3px var(--b);
@@ -17,7 +17,7 @@ head {
 
 /* body style attributes */
 body {
-  background-color: black;
+  background-color: var(--a);
   font-family: monospace;
   color: var(--b);
   display: block;
@@ -26,11 +26,20 @@ body {
   margin: 0;
   width: 100vw;
   align-content: center;
+  position: relative;
 }
 
-.header {
-  text-align: center;
+.body-light {
+  background-color: white;
+  font-family: monospace;
+  color: var(--a);
+  display: block;
+  min-height: 100vh;
+  /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
+  margin: 0;
   width: 100vw;
+  align-content: center;
+  position: relative;
 }
 
 @keyframes title-appears {
@@ -51,6 +60,22 @@ body {
   animation-duration: 2s;
   box-sizing: border-box;
   padding: 0 2vw 0 2vw;
+  position: relative;
+  top: -3vh;
+}
+
+.sub-title {
+  margin-top: 1vh;
+  font-size: 3vw;
+  font-style: italic;
+  width: 100vw;
+  text-align: center;
+  animation-name: title-appears;
+  animation-duration: 2s;
+  box-sizing: border-box;
+  padding: 0 2vw 0 2vw;
+  position: relative;
+  top: -3vh;
 }
 
 @keyframes top-down {
@@ -70,7 +95,7 @@ body {
   position: absolute;
   top: 0;
   box-sizing: border-box;
-  padding: 2vw 4vw 0 0;
+  padding: 2vh 4vw 0 0;
   animation-name: top-down;
   animation-duration: 2s;
   text-align: right;
@@ -107,7 +132,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100vw;
-  padding: 0 0 2vw 0;
+  padding: 0 0 2vh 0;
 }
 
 .links a {
@@ -134,18 +159,16 @@ body {
 }
 
 a {
-  color: var(--b);
   font-size: 3.5vw;
   text-decoration: none;
 }
 
-a:visited {
-  color: var(--b);
+.icons-dark {
+  color: var(--a) !important;
 }
 
-a:hover {
-  color: #f4d35e;
-  text-shadow: -1px 2px 3px var(--c);
+.icons-dark:hover {
+  color: var(--d) !important;
 }
 
 .divider {
@@ -160,9 +183,63 @@ a:hover {
 @media screen and (max-width: 800px) {
   .title {
     font-size: 72px;
+    overflow: hidden;
+  }
+
+  .sub-title {
+    font-size: 24px;
   }
 
   a {
     font-size: 28px;
   }
+}
+
+.switch-mode-btn {
+  cursor: pointer;
+  color: var(--b);
+}
+
+.switch-mode-btn:hover {
+  text-shadow: 0px 0px 2px var(--b);
+}
+
+.switch-mode-btn-light {
+  color: var(--a);
+}
+
+.switch-mode-btn-light:hover {
+  text-shadow: 0px 0px 2px var(--a);
+}
+
+.github-btn {
+  color: var(--b);
+}
+
+.github-btn:hover {
+  text-shadow: 0px 0px 2px var(--b);
+}
+
+.linkedin-btn {
+  color: var(--b);
+}
+
+.linkedin-btn:hover {
+  text-shadow: 0px 0px 2px var(--b);
+}
+
+.github-btn-light {
+  color: #2b3137;
+}
+
+.linkedin-btn-light {
+  color: #0a66c2;
+}
+
+.github-btn-light:hover {
+  text-shadow: 0px 0px 1px #2b3137;
+}
+
+.linkedin-btn-light:hover {
+  text-shadow: 0px 0px 1px #0a66c2;
 }

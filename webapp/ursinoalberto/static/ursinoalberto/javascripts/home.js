@@ -1,17 +1,10 @@
-center_central_section();
-
-window.onresize = center_central_section;
-
-function center_central_section() {
-  // get div elements
-  let title_section = document.querySelector(".title-section");
-  let variable_div = document.querySelector(".variable-div");
-  let central_section = document.querySelector(".profile-pic-section");
-  // get their real height
-  let x = title_section.clientHeight;
-  let tot = window.innerHeight;
-  let ch = central_section.clientHeight;
-  // modify the height of the "variable" div
-  let y = (tot - 2 * x - ch) / 2;
-  variable_div.style.height = y + "px";
+function switchMode() {
+  var body = document.body;
+  var linkedin_btn = document.getElementsByClassName("linkedin-btn")[0]
+  var github_btn = document.getElementsByClassName("github-btn")[0]
+  var dark_mode_btn = document.getElementsByClassName("switch-mode-btn")[0]
+  linkedin_btn.classList.toggle("linkedin-btn-light")
+  github_btn.classList.toggle("github-btn-light")
+  dark_mode_btn.classList.toggle("switch-mode-btn-light")
+  body.classList.toggle("body-light");
 }

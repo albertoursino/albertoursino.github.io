@@ -79,8 +79,6 @@ createsuperuser = "python webapp/manage.py createsuperuser"
 collect = "python webapp/manage.py collectstatic"
 # pre-commit
 runall = "pre-commit run --all-files"
-# live server
-livereload = "python webapp/manage.py livereload"
 
 [build-system]
 requires = ["poetry-core"]
