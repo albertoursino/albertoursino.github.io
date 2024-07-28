@@ -96,7 +96,7 @@ body {
   position: fixed;
   top: 0;
   box-sizing: border-box;
-  padding: 2vh 4vw 0 0;
+  padding: 3vh 4vw 0 0;
   animation-name: top-down;
   animation-duration: 2s;
   text-align: right;
@@ -123,7 +123,6 @@ body {
 }
 
 .links {
-  overflow: hidden;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -197,32 +196,20 @@ a {
   color: var(--b);
 }
 
-.switch-mode-btn:hover {
-  text-shadow: 0px 0px 2px var(--b);
-}
-
 .switch-mode-btn-light {
   color: var(--a);
 }
 
 .switch-mode-btn-light:hover {
-  text-shadow: 0px 0px 2px var(--a);
+  font-weight: 800;
 }
 
 .github-btn {
   color: var(--b);
 }
 
-.github-btn:hover {
-  text-shadow: 0px 0px 2px var(--b);
-}
-
 .linkedin-btn {
   color: var(--b);
-}
-
-.linkedin-btn:hover {
-  text-shadow: 0px 0px 2px var(--b);
 }
 
 .github-btn-light {
@@ -231,12 +218,4 @@ a {
 
 .linkedin-btn-light {
   color: #0a66c2;
-}
-
-.github-btn-light:hover {
-  text-shadow: 0px 0px 1px #2b3137;
-}
-
-.linkedin-btn-light:hover {
-  text-shadow: 0px 0px 1px #0a66c2;
 }
