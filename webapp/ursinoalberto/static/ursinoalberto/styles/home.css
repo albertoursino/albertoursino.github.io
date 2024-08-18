@@ -1,5 +1,25 @@
 @import "keyframes.css";
 
+:root {
+  --a: #101011;
+  --b: #ebebd3;
+  --c: #da4167;
+  --d: rgb(0, 91, 110);
+  --e: rgb(0, 147, 177);
+  --default-box-shadow: 10px 10px 20px 0px var(--b);
+  --default-text-shadow: 10px 10px 20px var(--b);
+  --default-border: solid 3px var(--b);
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+head {
+  display: none;
+}
+
 /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
 body {
   background-color: var(--a);
