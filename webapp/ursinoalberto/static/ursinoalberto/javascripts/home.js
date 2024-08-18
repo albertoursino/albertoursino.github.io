@@ -1,12 +1,20 @@
+/* Android: workaround to avoid browsers toolbar messing up with the UI */
 window.scrollTo(0, 1);
 
+/**
+ * Changes the UI colors when the user switches between the dark and light modes.
+ */
 function switchMode() {
   var body = document.body;
-  var linkedin_btn = document.getElementsByClassName("linkedin-btn")[0]
-  var github_btn = document.getElementsByClassName("github-btn")[0]
-  var dark_mode_btn = document.getElementsByClassName("switch-mode-btn")[0]
-  linkedin_btn.classList.toggle("linkedin-btn-light")
-  github_btn.classList.toggle("github-btn-light")
-  dark_mode_btn.classList.toggle("switch-mode-btn-light")
   body.classList.toggle("body-light");
+  /* these buttons needs special colors */
+  var linkedin_btn = document.getElementsByClassName("linkedin-btn")[0];
+  var github_btn = document.getElementsByClassName("github-btn")[0];
+  linkedin_btn.classList.toggle("linkedin-btn-light");
+  github_btn.classList.toggle("github-btn-light");
+  /* normal buttons which do not need special colors */
+  var normal_btns = document.getElementsByClassName("normal-btn");
+  for (let i = 0; i < normal_btns.length; i++) {
+    normal_btns[i].classList.toggle("normal-btn-light");
+  }
 }

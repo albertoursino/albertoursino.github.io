@@ -1,22 +1,5 @@
-/* defining global variables */
-:root {
-  --a: #101011;
-  --b: #ebebd3;
-  --c: #da4167;
-  --d: rgb(0, 91, 110);
-  --e: rgb(0, 147, 177);
-  --default-box-shadow: 10px 10px 20px 0px var(--b);
-  --default-text-shadow: 10px 10px 20px var(--b);
-  --default-border: solid 3px var(--b);
-  height: 100%;
-}
+@import "keyframes.css";
 
-/* head style attributes */
-head {
-  display: none;
-}
-
-/* body style attributes */
 body {
   background-color: var(--a);
   font-family: monospace;
@@ -43,15 +26,28 @@ body {
   position: relative;
 }
 
-@keyframes title-appears {
-  from {
-    opacity: 0;
-  }
+/* Header */
 
-  to {
-    opacity: 1;
-  }
+.header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  padding: 3vh 4vw 0 0;
+  animation-name: top-down;
+  animation-duration: 2s;
+  text-align: right;
 }
+
+.header a {
+  margin: 0 1vw;
+}
+
+.header a:last-child {
+  margin-right: 0;
+}
+
+/* Title */
 
 .title {
   font-size: 9vw;
@@ -79,50 +75,9 @@ body {
   top: -3vh;
 }
 
-@keyframes top-down {
-  from {
-    top: -50rem;
-    opacity: 0;
-  }
+/* Footer */
 
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-.header {
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  box-sizing: border-box;
-  padding: 3vh 4vw 0 0;
-  animation-name: top-down;
-  animation-duration: 2s;
-  text-align: right;
-}
-
-.header a {
-  margin: 0 1vw;
-}
-
-.header a:last-child {
-  margin-right: 0;
-}
-
-@keyframes down-top {
-  from {
-    bottom: -50rem;
-    opacity: 0;
-  }
-
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
-}
-
-.links {
+.footer {
   display: flex;
   justify-content: center;
   position: fixed;
@@ -131,19 +86,11 @@ body {
   padding: 0 0 2vh 0;
 }
 
-.links a {
+.footer .link {
   margin: 0 20px;
   position: relative;
-  animation-name: down-top;
+  animation-name: upwards;
   animation-duration: 2s;
-}
-
-.footer {
-  font-size: 0.8vw;
-  font-style: italic;
-  text-align: right;
-  margin-left: 70vw;
-  margin-bottom: 1em;
 }
 
 .icons {
@@ -167,41 +114,8 @@ a {
   color: var(--d) !important;
 }
 
-.divider {
-  width: 45%;
-  margin-bottom: 3vh;
-}
-
-.badges a {
-  margin: 0;
-}
-
-@media screen and (max-width: 800px) {
-  .title {
-    font-size: 72px;
-    overflow: hidden;
-  }
-
-  .sub-title {
-    font-size: 24px;
-  }
-
-  a {
-    font-size: 28px;
-  }
-}
-
 .switch-mode-btn {
   cursor: pointer;
-  color: var(--b);
-}
-
-.switch-mode-btn-light {
-  color: var(--a);
-}
-
-.switch-mode-btn-light:hover {
-  font-weight: 800;
 }
 
 .github-btn {
@@ -218,4 +132,42 @@ a {
 
 .linkedin-btn-light {
   color: #0a66c2;
+}
+
+.arrow-down {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 4vw 2vh 0;
+  animation-name: upwards;
+  animation-duration: 2s;
+}
+
+.normal-btn {
+  color: var(--b);
+}
+
+.normal-btn-light {
+  color: var(--a);
+}
+
+/* About Section */
+
+.about {}
+
+/* Media rules */
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 72px;
+    overflow: hidden;
+  }
+
+  .sub-title {
+    font-size: 24px;
+  }
+
+  a {
+    font-size: 28px;
+  }
 }

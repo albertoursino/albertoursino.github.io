@@ -7,9 +7,9 @@ def home(request: HttpRequest) -> HttpResponse:
     return render(request, "ursinoalberto/home.html", context={})
 
 
-def resume(request: HttpRequest) -> HttpResponse:
-    """Resume view."""
-    return render(request, "ursinoalberto/resume.html", context={})
+def about(request: HttpRequest) -> HttpResponse:
+    """About view."""
+    return render(request, "ursinoalberto/about.html", context={})
 
 
 def master_thesis(request: HttpRequest) -> HttpResponse:
