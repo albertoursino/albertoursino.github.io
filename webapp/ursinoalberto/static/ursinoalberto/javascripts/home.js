@@ -2,13 +2,10 @@
 window.scrollTo(0, 1);
 
 /* Mouse scroll listeners */
-document.addEventListener("wheel", (event) => {
-  if (event.deltaY > 0) {
-    scrollToAbout();
-  } else if (event.deltaY < 0) {
-    scrollToLandingPage();
-  }
-});
+function mouseScroll(event) {
+  scrollPage(event.deltaY);
+}
+document.addEventListener("wheel", mouseScroll);
 
 /**
  * Changes the UI colors when the user switches between the dark and light modes.
@@ -28,16 +25,63 @@ function switchMode() {
   }
 }
 
-/**
- * Smoothly scrolls the page to the about section.
- */
-function scrollToAbout() {
-  window.scrollTo(0, window.innerHeight);
+/* Animates the arrow, rotating it upside down or upwards */
+function rotateArrow(side) {
+  if (side == "up") {
+    document.getElementsByClassName("fas fa-caret-down")[0].animate(
+      [
+        {
+          transform: "rotate(0)",
+        },
+        {
+          transform: "rotate(0.5turn)",
+        },
+      ],
+      { duration: 500, fill: "forwards" }
+    );
+  } else if (side == "down") {
+    document.getElementsByClassName("fas fa-caret-down")[0].animate(
+      [
+        {
+          transform: "rotate(0.5turn)",
+        },
+        {
+          transform: "rotate(0)",
+        },
+      ],
+      { duration: 500, fill: "forwards" }
+    );
+  }
 }
 
 /**
- * Smoothly scrolls the page to the landing page.
+ * Smoothly scrolls the page between the about section and the landing page.
  */
-function scrollToLandingPage() {
-  window.scrollTo(0, 1);
+function scrollPage(mouseScrollY = null) {
+  // Avoids to scroll while the page is scrolling because I want to avoid two problems:
+  // - "window.scrollY <= 1"
+  // - the arrow rotation
+  document
+    .getElementsByClassName("arrow-down normal-btn")[0]
+    .setAttribute("onclick", null);
+  document.removeEventListener("wheel", mouseScroll);
+
+  if (
+    (window.scrollY <= 1 && mouseScrollY == null) ||
+    Math.sign(mouseScrollY) == 1
+  ) {
+    window.scrollTo(0, window.innerHeight);
+    rotateArrow("up");
+  } else {
+    window.scrollTo(0, 1);
+    rotateArrow("down");
+  }
+
+  // Reactivates the scroll
+  setTimeout(() => {
+    document
+      .getElementsByClassName("arrow-down normal-btn")[0]
+      .setAttribute("onclick", "scrollPage()");
+    document.addEventListener("wheel", mouseScroll);
+  }, "650");
 }

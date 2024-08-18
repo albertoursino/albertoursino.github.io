@@ -138,6 +138,10 @@ a {
   animation-duration: 2s;
 }
 
+.arrow-down i {
+  animation-fill-mode: forwards;
+}
+
 .normal-btn {
   color: var(--b);
 }
