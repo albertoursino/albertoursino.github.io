@@ -1,29 +1,22 @@
 @import "keyframes.css";
 
+/* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
 body {
   background-color: var(--a);
   font-family: monospace;
   color: var(--b);
-  display: block;
-  height: 100%;
-  /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
+  overflow-y: hidden;
   margin: 0;
-  width: 100vw;
-  align-content: center;
-  position: relative;
 }
 
 .body-light {
   background-color: white;
-  font-family: monospace;
   color: var(--a);
-  display: block;
-  height: 100%;
-  /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
-  margin: 0;
-  width: 100vw;
+}
+
+.landing-page {
+  height: 100vh;
   align-content: center;
-  position: relative;
 }
 
 /* Header */
@@ -80,10 +73,11 @@ body {
 .footer {
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100vw;
   padding: 0 0 2vh 0;
+  overflow: hidden;
 }
 
 .footer .link {
@@ -135,7 +129,8 @@ a {
 }
 
 .arrow-down {
-  position: absolute;
+  cursor: pointer;
+  position: fixed;
   right: 0;
   bottom: 0;
   padding: 0 4vw 2vh 0;
@@ -153,7 +148,9 @@ a {
 
 /* About Section */
 
-.about {}
+.about {
+  height: 50rem;
+}
 
 /* Media rules */
 

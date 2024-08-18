@@ -1,23 +1,36 @@
-{% extends "ursinoalberto/base.html" %}
-{% load static %}
-
-{% block head %}
+{% extends "ursinoalberto/base.html" %} {% load static %} {% block head %}
 <link rel="stylesheet" href="{% static 'ursinoalberto/styles/home.css' %}" />
-<link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet'>
+<link
+  href="https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css"
+  rel="stylesheet"
+/>
 <script src="{% static 'ursinoalberto/javascripts/home.js' %}"></script>
-{% endblock %}
-
-{% block body %}
-<div class="header">
-  <a class="switch-mode-btn normal-btn" onclick="switchMode()"><i class="fa-regular fa-lightbulb"></i></a>
+{% endblock %} {% block body %}
+<div class="landing-page">
+  <div class="header">
+    <a class="switch-mode-btn normal-btn" onclick="switchMode()"
+      ><i class="fa-regular fa-lightbulb"></i
+    ></a>
+  </div>
+  <div class="title">Alberto Ursino</div>
+  <div class="sub-title">I love writing code 🪶 and designing software 🎨</div>
+  <div class="footer">
+    <a
+      class="linkedin-btn link"
+      href="https://www.linkedin.com/in/alberto-ursino-8b3466161/"
+      target="_blank"
+      ><i class="fa-brands fa-linkedin"></i
+    ></a>
+    <a
+      class="github-btn link"
+      href="https://github.com/albertoursino"
+      target="_blank"
+      ><i class="fa-brands fa-github"></i
+    ></a>
+    <a class="arrow-down normal-btn" onclick="scrollToAbout()"
+      ><i class="fas fa-caret-down"></i
+    ></a>
+  </div>
 </div>
-<div class="title">Alberto Ursino</div>
-<div class="sub-title">I love writing code 🪶 and designing software 🎨</div>
-<div class="footer">
-  <a class="linkedin-btn link" href="https://www.linkedin.com/in/alberto-ursino-8b3466161/" target="_blank"><i
-      class="fa-brands fa-linkedin"></i></a>
-  <a class="github-btn link" href="https://github.com/albertoursino" target="_blank"><i class="fa-brands fa-github"></i></a>
-  <a class="arrow-down normal-btn" href="#about_section"><i class="fas fa-caret-down"></i></a>
-</div>
-<div class="about" id="about_section"></div>
+<div class="about" id="about_section">Ciao</div>
 {% endblock %}
