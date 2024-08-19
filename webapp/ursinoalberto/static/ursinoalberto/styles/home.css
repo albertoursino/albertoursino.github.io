@@ -60,10 +60,16 @@ body {
   margin-right: 0;
 }
 
+.switch-mode-btn {
+  cursor: pointer;
+  font-size: clamp(30px, 3vw, 3rem);
+}
+
 /* Title */
 
-.title {
-  font-size: 9vw;
+.landing-page .title {
+  cursor: default;
+  font-size: clamp(45px, 9vw, 10rem);
   width: 100vw;
   text-align: center;
   animation-name: title-appears;
@@ -74,9 +80,10 @@ body {
   top: -3vh;
 }
 
-.sub-title {
+.subtitle {
+  cursor: default;
   margin-top: 1vh;
-  font-size: 3vw;
+  font-size: clamp(25px, 3vw, 3rem);
   font-style: italic;
   width: 100vw;
   text-align: center;
@@ -116,7 +123,7 @@ body {
 }
 
 a {
-  font-size: 3.5vw;
+  font-size: clamp(25px, 3.5vw, 4rem);
   text-decoration: none;
 }
 
@@ -126,10 +133,6 @@ a {
 
 .icons-dark:hover {
   color: var(--d) !important;
-}
-
-.switch-mode-btn {
-  cursor: pointer;
 }
 
 .github-btn {
@@ -148,18 +151,14 @@ a {
   color: #0a66c2;
 }
 
-.arrow-down {
+.about-btn {
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
-  padding: 0 4vw 2vh 0;
+  padding: 0 5vw 2vh 0;
   animation-name: upwards;
   animation-duration: 2s;
-}
-
-.arrow-down i {
-  animation-fill-mode: forwards;
 }
 
 .normal-btn {
@@ -173,22 +172,58 @@ a {
 /* About Section */
 
 .about {
-  height: 50rem;
+  height: 100vh;
+  padding: 13vh 10vw;
+  box-sizing: border-box;
+}
+
+.section-title {
+  cursor: default;
+  font-size: clamp(30px, 4vw, 4rem);
+  margin-bottom: 3vh;
+}
+
+.experience {
+  display: flex;
+  margin-bottom: 7vh;
+}
+
+.date {
+  font-size: clamp(15px, 1.8vw, 2rem);
+  padding-right: 3vw;
+  white-space: nowrap;
+}
+
+.content {
+  width: 80%;
+}
+
+.experience .title {
+  font-size: clamp(15px, 1.8vw, 2rem);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.notes {
+  font-size: clamp(11px, 1.6vw, 2rem);
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.skills {
+  font-size: clamp(11px, 1.6vw, 2rem);
+  font-weight: 700;
+  color: var(--c);
 }
 
 /* Media rules */
 
 @media screen and (max-width: 800px) {
   .title {
-    font-size: 72px;
     overflow: hidden;
   }
 
-  .sub-title {
-    font-size: 24px;
-  }
-
-  a {
-    font-size: 28px;
+  .experience {
+    flex-direction: column;
   }
 }
