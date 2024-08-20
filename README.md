@@ -10,6 +10,6 @@
 
 This repository is dedicated to creating a web app which serves as my personal portfolio. The web app is designed and built in Django, and deployed using AWS Elastic Beanstalk.
 
-As a personal goal: I am aiming to improve my coding skills in JavaScrit, HTML and CSS.
+As a personal goal: I am aiming to improve my coding skills in JavaScript, HTML and CSS.
 
-You can visit the website from here: [https://albertoursino.com](https://albertoursino.com/)
+You can visit the website from here: <a href="https://albertoursino.com/" target="_blank">https://albertoursino.com</a>
