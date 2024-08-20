@@ -86,11 +86,11 @@ body {
   font-size: clamp(25px, 0.8vw, 3rem);
   font-style: italic;
   width: 100vw;
-  text-align: left;
+  text-align: center;
   animation-name: title-appears;
   animation-duration: 2s;
   box-sizing: border-box;
-  padding: 0 10vw;
+  padding: 0 2vw;
   position: relative;
   top: -3vh;
 }
@@ -156,7 +156,7 @@ a {
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: 0 5vw 2vh 0;
+  padding: 0 4.2vw 2vh 0;
   animation-name: upwards;
   animation-duration: 2s;
 }
