@@ -83,14 +83,14 @@ body {
 .subtitle {
   cursor: default;
   margin-top: 1vh;
-  font-size: clamp(25px, 3vw, 3rem);
+  font-size: clamp(25px, 0.8vw, 3rem);
   font-style: italic;
   width: 100vw;
-  text-align: center;
+  text-align: left;
   animation-name: title-appears;
   animation-duration: 2s;
   box-sizing: border-box;
-  padding: 0 2vw 0 2vw;
+  padding: 0 10vw;
   position: relative;
   top: -3vh;
 }

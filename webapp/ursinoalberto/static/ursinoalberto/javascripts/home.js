@@ -1,15 +1,33 @@
 // global variable for animations speed
-let speed = 500;
+let speed = 600;
 
 /** Function for the listener of type "wheel"
  *
  * @param event: WheelEvent (https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent)
  */
 function mouseScroll(event) {
+  document.removeEventListener("wheel", mouseScroll);
   scrollPage(event.deltaY);
 }
 
+let prev_y = null;
+
+/** Function for the listener of type "touchmove"
+ *
+ * @param event: TouchEvent (https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent)
+ */
+function touchScroll(event) {
+  if (prev_y != null) {
+    document.removeEventListener("touchmove", touchScroll);
+    scrollPage(prev_y - event.changedTouches[0].clientY);
+    prev_y = null;
+  } else {
+    prev_y = event.changedTouches[0].clientY;
+  }
+}
+
 document.addEventListener("wheel", mouseScroll);
+document.addEventListener("touchmove", touchScroll);
 
 /**
  * Changes the UI colors when the user switches between the dark and light modes.
@@ -70,13 +88,6 @@ function fadeLandingPage(type) {
  * @param mouseScrollY: double representing the vertical scroll amount in the WheelEvent.deltaMode unit
  */
 function scrollPage(mouseScrollY = null) {
-  // Avoids to scroll while the page is scrolling because I want to avoid two problems:
-  // - "window.scrollY <= 1"
-  document
-    .getElementsByClassName("about-btn normal-btn")[0]
-    .setAttribute("onclick", null);
-  document.removeEventListener("wheel", mouseScroll);
-
   const about_section = document.getElementById("about_section");
 
   if (mouseScrollY == null) {
@@ -101,10 +112,9 @@ function scrollPage(mouseScrollY = null) {
   }
 
   // Reactivates the scroll
+  // Why? Bug when scrolling while already scrolling -> "window.scrollY <= 1"
   setTimeout(() => {
-    document
-      .getElementsByClassName("about-btn normal-btn")[0]
-      .setAttribute("onclick", "scrollPage()");
     document.addEventListener("wheel", mouseScroll);
+    document.addEventListener("touchmove", touchScroll);
   }, speed.toString());
 }
