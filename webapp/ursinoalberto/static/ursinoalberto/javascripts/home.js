@@ -83,7 +83,7 @@ function fadeLandingPage(type) {
 }
 
 /**
- * Smoothly scrolls the page between the about section and the landing page.
+ * Smoothly scrolls the page between the landing page and the about section.
  *
  * @param mouseScrollY: double representing the vertical scroll amount in the WheelEvent.deltaMode unit
  */
@@ -91,7 +91,7 @@ function scrollPage(mouseScrollY = null) {
   const about_section = document.getElementById("about_section");
 
   if (mouseScrollY == null) {
-    if (window.scrollY <= 1) {
+    if (window.scrollY < window.innerHeight / 2) {
       about_section.scrollIntoView();
       fadeLandingPage(1);
     } else {
@@ -99,7 +99,10 @@ function scrollPage(mouseScrollY = null) {
       fadeLandingPage(2);
     }
   } else {
-    if (Math.sign(mouseScrollY) == 1 && window.scrollY < window.innerHeight) {
+    if (
+      Math.sign(mouseScrollY) == 1 &&
+      window.scrollY < window.innerHeight / 2
+    ) {
       about_section.scrollIntoView();
       fadeLandingPage(1);
     } else if (
