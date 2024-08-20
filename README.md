@@ -6,8 +6,10 @@
 
   <a href="https://img.shields.io/badge/WIP-blue?color=da4167">![example1](https://img.shields.io/badge/WIP-blue?color=da4167)</a>
 
-Personal project with the goal of experimenting with AWS, and learning to code in HTML and CSS.
-
-[albertoursino.com](https://albertoursino.com/)
-
 </div>
+
+This repository is dedicated to creating a web app which serves as my personal portfolio. The web app is designed and built in Django, and deployed using AWS Elastic Beanstalk.
+
+As a personal goal: I am aiming to improve my coding skills in JavaScrit, HTML and CSS.
+
+You can visit the website from here: [https://albertoursino.com](https://albertoursino.com/)
