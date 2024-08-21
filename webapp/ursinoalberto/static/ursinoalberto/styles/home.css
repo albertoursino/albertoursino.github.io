@@ -152,13 +152,16 @@ a {
 }
 
 .about-btn {
-  cursor: pointer;
   position: absolute;
   right: 0;
   bottom: 0;
   padding: 0 4.2vw 2vh 0;
   animation-name: upwards;
   animation-duration: 2s;
+}
+
+.about-btn i {
+  cursor: pointer;
 }
 
 .normal-btn {
@@ -198,10 +201,24 @@ a {
   width: 80%;
 }
 
-.experience .title {
+.experience .content .title {
   font-size: clamp(15px, 1.8vw, 2rem);
   font-weight: 700;
   text-decoration: none;
+}
+
+.experience .content .title p {
+  margin: 0 0.5vw 0 0;
+  display: inline;
+}
+
+.experience .content .title i {
+  transform: rotate(-45deg);
+  transition: transform 0.3s;
+}
+
+.experience .content .title:hover i {
+  transform: rotate(-45deg) translate(0.4vw, 0);
 }
 
 .notes {

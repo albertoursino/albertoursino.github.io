@@ -31,3 +31,13 @@
         opacity: 1;
     }
 }
+
+@keyframes link-hover {
+    from {
+        transform: rotate(-45deg);
+    }
+
+    to {
+        transform: rotate(-45deg) translate(0, 0.6vw);
+    }
+}
