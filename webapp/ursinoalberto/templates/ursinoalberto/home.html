@@ -1,21 +1,116 @@
-{% extends "ursinoalberto/base.html" %}
 {% load static %}
 
-{% block head %}
-<link rel="stylesheet" href="{% static 'ursinoalberto/styles/home.css' %}" />
-<link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet'>
-<script src="{% static 'ursinoalberto/javascripts/home.js' %}"></script>
-{% endblock %}
+<!DOCTYPE html>
 
-{% block body %}
-<div class="header">
-  <a class="switch-mode-btn" onclick="switchMode()"><i class="fa-regular fa-lightbulb"></i></a>
-</div>
-<div class="title">Alberto Ursino</div>
-<div class="sub-title">I love writing code 🪶 and designing software 🎨</div>
-<div class="links">
-  <a class="linkedin-btn" href="https://www.linkedin.com/in/alberto-ursino-8b3466161/" target="_blank"><i
-      class="fa-brands fa-linkedin"></i></a>
-  <a class="github-btn" href="https://github.com/albertoursino" target="_blank"><i class="fa-brands fa-github"></i></a>
-</div>
-{% endblock %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="VEqKrPDpE371NzQem9yg275L2N5oFwFASgbQoBdtipA" />
+  <title>Alberto Ursino</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'ursinoalberto/images/favicon/favicon.ico' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'ursinoalberto/styles/home.css' %}" />
+  <link href="https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css" rel="stylesheet" />
+  <script src="{% static 'ursinoalberto/javascripts/home.js' %}"></script>
+</head>
+
+<body>
+  <div class="header">
+    <a class="switch-mode-btn normal-btn" onclick="switchMode()"><i class="fa-solid fa-glasses"></i></a>
+  </div>
+  <div class="landing-page">
+    <div class="title">Alberto Ursino</div>
+    <div class="subtitle">I am a passionate software engineer from Italy</div>
+    <div class="footer">
+      <a class="linkedin-btn link" href="https://www.linkedin.com/in/alberto-ursino-8b3466161/" target="_blank"><i
+          class="fa-brands fa-linkedin"></i></a>
+      <a class="github-btn link" href="https://github.com/albertoursino" target="_blank"><i
+          class="fa-brands fa-github"></i></a>
+      <a class="about-btn normal-btn"><i class="fa-solid fa-ellipsis" onclick="scrollPage()"></i></a>
+    </div>
+  </div>
+  <div class="about" id="about_section">
+    <div class="section-title">Experience</div>
+    <div class="experience">
+      <div class="date">
+        12/2023 — 05/2024
+      </div>
+      <div class="content">
+        <a class="title normal-btn" href="https://www.infineon.com/" target="_blank">
+          <p>Machine Learning Engineer, Intern ·
+            Infineon Technologies</p><i class="fa-solid fa-arrow-right"></i>
+        </a>
+        </a>
+        <div class="notes">
+        </div>
+        <div class="skills">
+          <div class="entry">
+            Python, MLOps, CI/CD
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="experience">
+      <div class="date">
+        09/2023 — 11/2023
+      </div>
+      <div class="content">
+        <a class="title normal-btn" href="https://www.infineon.com/" target="_blank">
+          <p>Data Engineer, Intern ·
+            Infineon Technologies</p><i class="fa-solid fa-arrow-right"></i>
+        </a>
+        </a>
+        <div class="notes">
+        </div>
+        <div class="skills">
+          <div class="entry">
+            Python, CI/CD
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="experience">
+      <div class="date">
+        03/2023 — 10/2023
+      </div>
+      <div class="content">
+        <a class="title normal-btn" href="https://www.swegon.com/" target="_blank">
+          <p>Data Analyst, Intern · Swegon Operations Srl</p><i class="fa-solid fa-arrow-right"></i>
+        </a>
+        </a>
+        <div class="notes">
+        </div>
+        <div class="skills">
+          <div class="entry">
+            Python, Machine Learning
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="experience">
+      <div class="date">
+        05/2022 — 04/2023
+      </div>
+      <div class="content">
+        <a class="title normal-btn" href="https://www.gloobetf.com/" target="_blank">
+          <p>Software Engineer · GloobETF</p><i class="fa-solid fa-arrow-right"></i>
+        </a>
+        </a>
+        <div class="notes">
+        </div>
+        <div class="skills">
+          <div class="entry">
+            Python, Django, Full Stack
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

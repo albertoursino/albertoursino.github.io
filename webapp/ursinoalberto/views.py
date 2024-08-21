@@ -3,13 +3,8 @@ from django.shortcuts import render
 
 
 def home(request: HttpRequest) -> HttpResponse:
-    """Home view."""
+    """Render the main view of the website."""
     return render(request, "ursinoalberto/home.html", context={})
-
-
-def resume(request: HttpRequest) -> HttpResponse:
-    """Resume view."""
-    return render(request, "ursinoalberto/resume.html", context={})
 
 
 def master_thesis(request: HttpRequest) -> HttpResponse:

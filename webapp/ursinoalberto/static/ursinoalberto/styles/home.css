@@ -1,4 +1,5 @@
-/* defining global variables */
+@import "keyframes.css";
+
 :root {
   --a: #101011;
   --b: #ebebd3;
@@ -11,85 +12,34 @@
   height: 100%;
 }
 
-/* head style attributes */
+html {
+  scroll-behavior: smooth;
+}
+
 head {
   display: none;
 }
 
-/* body style attributes */
+/* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
 body {
   background-color: var(--a);
   font-family: monospace;
   color: var(--b);
-  display: block;
-  height: 100%;
-  /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
+  overflow-y: hidden;
   margin: 0;
-  width: 100vw;
-  align-content: center;
-  position: relative;
 }
 
 .body-light {
   background-color: white;
-  font-family: monospace;
   color: var(--a);
-  display: block;
-  height: 100%;
-  /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
-  margin: 0;
-  width: 100vw;
+}
+
+.landing-page {
+  height: 100vh;
   align-content: center;
-  position: relative;
 }
 
-@keyframes title-appears {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.title {
-  font-size: 9vw;
-  width: 100vw;
-  text-align: center;
-  animation-name: title-appears;
-  animation-duration: 2s;
-  box-sizing: border-box;
-  padding: 0 2vw 0 2vw;
-  position: relative;
-  top: -3vh;
-}
-
-.sub-title {
-  margin-top: 1vh;
-  font-size: 3vw;
-  font-style: italic;
-  width: 100vw;
-  text-align: center;
-  animation-name: title-appears;
-  animation-duration: 2s;
-  box-sizing: border-box;
-  padding: 0 2vw 0 2vw;
-  position: relative;
-  top: -3vh;
-}
-
-@keyframes top-down {
-  from {
-    top: -50rem;
-    opacity: 0;
-  }
-
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
+/* Header */
 
 .header {
   width: 100vw;
@@ -110,40 +60,58 @@ body {
   margin-right: 0;
 }
 
-@keyframes down-top {
-  from {
-    bottom: -50rem;
-    opacity: 0;
-  }
-
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
+.switch-mode-btn {
+  cursor: pointer;
+  font-size: clamp(30px, 3vw, 3rem);
 }
 
-.links {
+/* Title */
+
+.landing-page .title {
+  cursor: default;
+  font-size: clamp(45px, 9vw, 10rem);
+  width: 100vw;
+  text-align: center;
+  animation-name: title-appears;
+  animation-duration: 2s;
+  box-sizing: border-box;
+  padding: 0 2vw 0 2vw;
+  position: relative;
+  top: -3vh;
+}
+
+.subtitle {
+  cursor: default;
+  margin-top: 1vh;
+  font-size: clamp(25px, 0.8vw, 3rem);
+  font-style: italic;
+  width: 100vw;
+  text-align: center;
+  animation-name: title-appears;
+  animation-duration: 2s;
+  box-sizing: border-box;
+  padding: 0 2vw;
+  position: relative;
+  top: -3vh;
+}
+
+/* Footer */
+
+.footer {
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100vw;
   padding: 0 0 2vh 0;
+  overflow: hidden;
 }
 
-.links a {
+.footer .link {
   margin: 0 20px;
   position: relative;
-  animation-name: down-top;
+  animation-name: upwards;
   animation-duration: 2s;
-}
-
-.footer {
-  font-size: 0.8vw;
-  font-style: italic;
-  text-align: right;
-  margin-left: 70vw;
-  margin-bottom: 1em;
 }
 
 .icons {
@@ -155,7 +123,7 @@ body {
 }
 
 a {
-  font-size: 3.5vw;
+  font-size: clamp(25px, 3.5vw, 4rem);
   text-decoration: none;
 }
 
@@ -165,43 +133,6 @@ a {
 
 .icons-dark:hover {
   color: var(--d) !important;
-}
-
-.divider {
-  width: 45%;
-  margin-bottom: 3vh;
-}
-
-.badges a {
-  margin: 0;
-}
-
-@media screen and (max-width: 800px) {
-  .title {
-    font-size: 72px;
-    overflow: hidden;
-  }
-
-  .sub-title {
-    font-size: 24px;
-  }
-
-  a {
-    font-size: 28px;
-  }
-}
-
-.switch-mode-btn {
-  cursor: pointer;
-  color: var(--b);
-}
-
-.switch-mode-btn-light {
-  color: var(--a);
-}
-
-.switch-mode-btn-light:hover {
-  font-weight: 800;
 }
 
 .github-btn {
@@ -218,4 +149,98 @@ a {
 
 .linkedin-btn-light {
   color: #0a66c2;
+}
+
+.about-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 4.2vw 2vh 0;
+  animation-name: upwards;
+  animation-duration: 2s;
+}
+
+.about-btn i {
+  cursor: pointer;
+}
+
+.normal-btn {
+  color: var(--b);
+}
+
+.normal-btn-light {
+  color: var(--a);
+}
+
+/* About Section */
+
+.about {
+  height: 100vh;
+  padding: 13vh 10vw;
+  box-sizing: border-box;
+}
+
+.section-title {
+  cursor: default;
+  font-size: clamp(30px, 4vw, 4rem);
+  margin-bottom: 3vh;
+}
+
+.experience {
+  display: flex;
+  margin-bottom: 7vh;
+}
+
+.date {
+  font-size: clamp(15px, 1.8vw, 2rem);
+  padding-right: 3vw;
+  white-space: nowrap;
+}
+
+.content {
+  width: 80%;
+}
+
+.experience .content .title {
+  font-size: clamp(15px, 1.8vw, 2rem);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.experience .content .title p {
+  margin: 0 0.5vw 0 0;
+  display: inline;
+}
+
+.experience .content .title i {
+  transform: rotate(-45deg);
+  transition: transform 0.3s;
+}
+
+.experience .content .title:hover i {
+  transform: rotate(-45deg) translate(0.4vw, 0);
+}
+
+.notes {
+  font-size: clamp(11px, 1.6vw, 2rem);
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.skills {
+  font-size: clamp(11px, 1.6vw, 2rem);
+  font-weight: 700;
+  color: var(--c);
+}
+
+/* Media rules */
+
+@media screen and (max-width: 800px) {
+  .title {
+    overflow: hidden;
+  }
+
+  .experience {
+    flex-direction: column;
+  }
 }
