@@ -75,7 +75,7 @@ body {
   animation-name: title-appears;
   animation-duration: 2s;
   box-sizing: border-box;
-  padding: 0 2vw 0 2vw;
+  padding: 0 5vw;
   position: relative;
   top: -3vh;
 }
@@ -83,14 +83,14 @@ body {
 .subtitle {
   cursor: default;
   margin-top: 1vh;
-  font-size: clamp(25px, 0.8vw, 3rem);
+  font-size: clamp(18px, 2vw, 8rem);
   font-style: italic;
   width: 100vw;
   text-align: center;
   animation-name: title-appears;
   animation-duration: 2s;
   box-sizing: border-box;
-  padding: 0 2vw;
+  padding: 0 5vw;
   position: relative;
   top: -3vh;
 }

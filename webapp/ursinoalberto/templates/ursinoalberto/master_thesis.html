@@ -1,7 +1,17 @@
-{% extends "ursinoalberto/base.html" %}
 {% load static %}
 
-{% block head %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-site-verification" content="VEqKrPDpE371NzQem9yg275L2N5oFwFASgbQoBdtipA" />
+    <title>Master's Thesis</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'ursinoalberto/images/favicon/favicon.ico' %}" />
+</head>
+
 <style>
     body {
         width: 100vw;
@@ -15,8 +25,9 @@
         height: inherit;
     }
 </style>
-{% endblock %}
 
-{% block body %}
-<embed src="{% static 'ursinoalberto/pdfs/master_thesis.pdf' %}" type="application/pdf">
-{% endblock %}
+<body>
+    <embed src="{% static 'ursinoalberto/pdfs/master_thesis.pdf' %}" type="application/pdf">
+</body>
+
+</html>
