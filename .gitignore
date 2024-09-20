@@ -8,3 +8,4 @@ node_modules
 !.elasticbeanstalk/*.global.yml
 webapp/static
 .vscode/settings.json
+.env
