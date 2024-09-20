@@ -8,8 +8,6 @@
 
 </div>
 
-This repository is dedicated to creating a web app which serves as my personal portfolio. The web app is designed and built in Django, and deployed using AWS Elastic Beanstalk.
-
-As a personal goal: I am aiming to improve my coding skills in JavaScript, HTML and CSS.
+This repository is focused on developing a web app to showcase my personal portfolio. The web app is designed and built in Django, and deployed using AWS Elastic Beanstalk.
 
 You can visit the website from here: <a href="https://albertoursino.com/">https://albertoursino.com</a>
