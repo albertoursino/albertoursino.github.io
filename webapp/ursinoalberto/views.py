@@ -3,15 +3,15 @@ from django.shortcuts import render
 
 
 def home(request: HttpRequest) -> HttpResponse:
-    """Render the main view of the website."""
+    """Render the main page of the website."""
     return render(request, "ursinoalberto/home.html", context={})
 
 
 def master_thesis(request: HttpRequest) -> HttpResponse:
-    """Master's thesis view."""
+    """Render the Master's Thesis."""
     return render(request, "ursinoalberto/master_thesis.html", context={})
 
 
 def bachelor_thesis(request: HttpRequest) -> HttpResponse:
-    """Bachelor's thesis view."""
+    """Render the Bachelor's Thesis."""
     return render(request, "ursinoalberto/bachelor_thesis.html", context={})
