@@ -8,6 +8,7 @@
 
 </div>
 
-This repository is focused on developing a web app to showcase my personal portfolio. The web app is designed and built in Django, and deployed using AWS Elastic Beanstalk.
+This repo contains my Django-based personal website's source code.
 
-You can visit the website from here: <a href="https://albertoursino.com/">https://albertoursino.com</a>
+- Tested on the following browsers -> Chrome
+- Link to the website -> <a href="https://albertoursino.com/">https://albertoursino.com</a>
