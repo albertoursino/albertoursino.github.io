@@ -73,7 +73,7 @@ body {
 
 .landing-page .title {
   cursor: default;
-  font-size: clamp(45px, 9vw, 10rem);
+  font-size: clamp(4rem, 9vw, 9rem);
   width: 100vw;
   text-align: center;
   animation-name: title-appears;
@@ -87,7 +87,7 @@ body {
 .subtitle {
   cursor: default;
   margin-top: 1vh;
-  font-size: clamp(18px, 2vw, 8rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   font-style: italic;
   width: 100vw;
   text-align: center;
@@ -191,10 +191,6 @@ a {
   font-size: clamp(15px, 1.8vw, 2rem);
   padding-right: 3vw;
   white-space: nowrap;
-}
-
-.content {
-  width: 80%;
 }
 
 .experience .content .title {
