@@ -26,9 +26,9 @@ function touchScroll(event) {
   }
 }
 
-document.addEventListener("wheel", mouseScroll);
-document.addEventListener("touchmove", touchScroll);
-document.addEventListener("mouseover", (event) => {});
+// document.addEventListener("wheel", mouseScroll);
+// document.addEventListener("touchmove", touchScroll);
+// document.addEventListener("mouseover", (event) => {});
 
 /**
  * Changes the UI colors when the user switches between the dark and light modes.
