@@ -22,16 +22,15 @@ head {
 
 /* https://greggod.medium.com/css-do-not-put-height-100-on-the-body-html-e36bda3551b3 */
 body {
-  background-color: var(--a);
+  background-color: white;
   font-family: monospace;
-  color: var(--b);
   overflow-y: hidden;
   margin: 0;
 }
 
-.body-light {
-  background-color: white;
-  color: var(--a);
+.bg-dark {
+  background-color: var(--a);
+  color: var(--b);
 }
 
 .landing-page {
@@ -62,6 +61,11 @@ body {
 
 .switch-mode-btn {
   cursor: pointer;
+  font-size: clamp(30px, 3vw, 3rem);
+}
+
+.download-cv {
+  text-decoration: none;
   font-size: clamp(30px, 3vw, 3rem);
 }
 
@@ -135,19 +139,11 @@ a {
   color: var(--d) !important;
 }
 
-.github-btn {
-  color: var(--b);
-}
-
-.linkedin-btn {
-  color: var(--b);
-}
-
-.github-btn-light {
+.github-color {
   color: #2b3137;
 }
 
-.linkedin-btn-light {
+.linkedin-color {
   color: #0a66c2;
 }
 
@@ -164,11 +160,11 @@ a {
   cursor: pointer;
 }
 
-.normal-btn {
-  color: var(--b);
+.light-text {
+  color: var(--b) !important;
 }
 
-.normal-btn-light {
+.dark-text {
   color: var(--a);
 }
 

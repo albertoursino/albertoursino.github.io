@@ -28,23 +28,20 @@ function touchScroll(event) {
 
 document.addEventListener("wheel", mouseScroll);
 document.addEventListener("touchmove", touchScroll);
-document.addEventListener("mouseover", (event) => {});
+document.addEventListener("mouseover", (event) => { });
 
 /**
- * Changes the UI colors when the user switches between the dark and light modes.
+ * Switch the UI mode between "Dark" and "Light".
  */
 function switchMode() {
-  var body = document.body;
-  body.classList.toggle("body-light");
+  document.body.classList.toggle("bg-dark");
   /* these buttons needs special colors */
-  var linkedin_btn = document.getElementsByClassName("linkedin-btn")[0];
-  var github_btn = document.getElementsByClassName("github-btn")[0];
-  linkedin_btn.classList.toggle("linkedin-btn-light");
-  github_btn.classList.toggle("github-btn-light");
+  document.getElementsByClassName("github-color")[0].classList.toggle("light-text");
+  document.getElementsByClassName("linkedin-color")[0].classList.toggle("light-text");
   /* normal buttons which do not need special colors */
-  var normal_btns = document.getElementsByClassName("normal-btn");
+  var normal_btns = document.getElementsByClassName("dark-text");
   for (let i = 0; i < normal_btns.length; i++) {
-    normal_btns[i].classList.toggle("normal-btn-light");
+    normal_btns[i].classList.toggle("light-text");
   }
 }
 
