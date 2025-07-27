@@ -10,14 +10,6 @@
 
 ## 🚀 About
 
-This repo contains my Django-based personal website's source code.
-
-✅ Tested on the following browsers: **Chrome**
+This repo hosts my personal website's source code.
 
 🔗 Link to the website: <a href="https://albertoursino.com/">https://albertoursino.com</a>
-
-## 🤝 Contributions
-
-You can feel free to fork this repo and build your own personal website using my template. Also, you are more than welcome to give any contribution you want. Let's build a beautiful personal website together!
-
-Please feel free to contribute by [submitting an issue](https://github.com/albertoursino/albertoursino-website/issues).
