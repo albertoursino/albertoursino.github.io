@@ -7,9 +7,3 @@
 <a href="https://img.shields.io/badge/WIP-blue?color=da4167">![](https://img.shields.io/badge/WIP-blue?color=da4167)</a>
 
 </div>
-
-## 🚀 About
-
-This repo hosts my personal website's source code.
-
-🔗 Link to the website: <a href="https://albertoursino.com/">https://albertoursino.com</a>
