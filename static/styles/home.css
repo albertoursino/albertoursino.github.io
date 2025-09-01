@@ -8,6 +8,8 @@
   --default-text-shadow: 10px 10px 20px var(--b);
   --default-border: solid 3px var(--b);
   height: 100%;
+  line-break: auto;
+  padding: 0 5vw;
 }
 
 head {
@@ -26,62 +28,36 @@ body {
   align-content: center;
 }
 
-/* Header */
-
-.header {
-  position: fixed;
-  top: 0;
-  padding: 3vh 4vw 0 0;
-  text-align: right;
-}
-
-.header a {
-  margin: 0 1vw;
-}
-
-.header a:last-child {
-  margin-right: 0;
-}
-
-/* Title */
+/* Landing page */
 
 .landing-page .title {
   font-size: calc(30px + 7vw);
-  padding: 0 1rem;
   text-align: center;
   position: relative;
-  line-break: normal;
   top: -4vh;
 }
 
-.subtitle {
+.landing-page .subtitle {
   font-size: calc(12px + 2.3vw);
   text-align: center;
   position: relative;
-  padding: 0 5vw;
 }
 
-/* Footer */
-
-.footer {
+.social-icons {
   text-align: center;
   position: relative;
   top: 8rem;
 }
 
-.footer .link {
+.social-icons .link {
   font-size: calc(10px + 1.7vw);
   color: var(--a);
   margin: 0 20px;
   position: relative;
 }
 
-.icons {
-  padding: 17px 0 0 0;
-}
-
-.icons i {
-  margin: 0 10px;
+.link:hover {
+  color: var(--c);
 }
 
 a {
@@ -97,77 +73,52 @@ a {
   color: #0a66c2;
 }
 
-.about-btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 0 4.2vw 2vh 0;
+/* Projects Section */
+
+.header {
+  justify-self: center;
+  font-size: calc(15px + 3.5vw);
+  width: 65vw;
+  margin-bottom: 4vh;
+  padding-top: 3vh;
 }
 
-.about-btn i {
-  cursor: pointer;
+.card {
+  justify-self: center;
+  margin-top: 5vh;
+  width: min-content;
 }
 
-/* About Section */
-
-.about {
-  height: 100vh;
-  padding: 13vh 10vw;
+.card:last-child {
+  padding-bottom: 3vh;
 }
 
-.section-title {
-  cursor: default;
-  font-size: clamp(30px, 4vw, 4rem);
-  margin-bottom: 3vh;
+.projects {
+  min-height: 100vh;
 }
 
-.experience {
-  display: flex;
-  margin-bottom: 7vh;
+.projects .title {
+  font-size: calc(5px + 1vw);
+  width: 45vw;
 }
 
-.date {
-  font-size: clamp(15px, 1.8vw, 2rem);
-  padding-right: 3vw;
-  white-space: nowrap;
-}
-
-.experience .content .title {
-  font-size: clamp(15px, 1.8vw, 2rem);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.experience .content .title p {
-  margin: 0 0.5vw 0 0;
-  display: inline;
-}
-
-.experience .content .title i {
-  transform: rotate(-45deg);
-  transition: transform 0.3s;
-}
-
-.experience .content .title:hover i {
-  transform: rotate(-45deg) translate(0.4vw, 0);
-}
-
-.notes {
-  font-size: clamp(11px, 1.6vw, 2rem);
+.projects .subtitle {
+  font-size: calc(7px + 0.5vw);
   margin-top: 1vh;
-  margin-bottom: 1vh;
 }
 
-.skills {
-  font-size: clamp(11px, 1.6vw, 2rem);
-  font-weight: 700;
-  color: var(--c);
+.description {
+  margin-top: 1vh;
+}
+
+.projects .link:hover {
+  text-decoration: underline;
 }
 
 /* Media rules */
 
-@media screen and (max-width: 400px) {
-  .title {
+@media screen and (max-width: 250px) {
+  :root {
     line-break: anywhere !important;
   }
 }
