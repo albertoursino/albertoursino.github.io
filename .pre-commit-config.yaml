@@ -1,8 +1,0 @@
-repos:
-  # Python linter and formatter (https://docs.astral.sh/ruff/)
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.2
-    hooks:
-      - id: ruff # Ruff linter
-        args: [--fix]
-      - id: ruff-format # Ruff formatter
