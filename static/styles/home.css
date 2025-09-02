@@ -70,7 +70,7 @@ body {
 }
 
 .footer .link {
-  font-size: calc(10px + 1.7vw);
+  font-size: calc(13px + 1.7vw);
   color: var(--a);
   margin: 0 20px;
   position: relative;
